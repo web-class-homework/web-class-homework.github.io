@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/statement.css">
+    <link rel="shortcut icon" href="images/logo3.jpg" type="image/x-icon" />
+
+    <title>大鱼海棠</title>
+</head>
+
+<body>
+    <div class="wrapin">
+        <!--头部-->
+        <div class="banner">
+            <div class="banner_box  ">
+                <div class="box-1">
+                    <ul>
+                        <li><img src="images/banner1.jpg"></li>
+                        <li><img src="images/banner2.jpg"></li>
+                        <li><img src="images/banner3.jpg"></li>
+                    </ul>
+                </div>
+                <div class="box-2">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/js.js"></script>
+        <header>
+            <ul class="nav clearfix">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="list.html">角色介绍</a></li>
+                <li><a href="pic.html">精彩图集</a></li>
+                <li><a href="zhuce.html">注册</a></li>
+                <li><a href="denglu.html">登录</a></li>
+                <li><a href="statement.html">网页报告</a></li>
+            </ul>
+        </header>
+        <!--内容-->
+        <div class="con ">
+            <div class="title">
+                <h2>网页内容概要</h2>
+            </div>
+            <div class="text">
+                <p>
+                    &emsp;&emsp;网页以国产动漫电影《大鱼海棠》为主题，对电影的创作由来、幕后花絮、电影的主要内容、主要人物介绍进行了简要的概括，并展示了电影中一些精彩的画面图集，在此基础上，还设计了一个网站的登录窗口和一个账号注册窗口，最后将本网站的设计报告添加在网站页面中。
+                </p>
+            </div>
+            <div class="title">
+                <h2>开发过程</h2>
+            </div>
+            <div class="text">
+                <p>
+                    &emsp;&emsp;首先为整个网页设置背景图片，然后为网页内容的主体部分设置宽度与定位，使网页的内容在页面的中间展示。在网页顶部放置三张相关主题的图片，并为它们设置相同的样式，然后通过JavaScript的定时器实现定时轮播的效果，接下来设计网页的导航栏部分，导航栏采用Flex布局实现，
+                    至此，网页的各个页面所共有的部分开发完成，接下来对各个部分的内容进行设计开发，网站首页的内容包括电影《大鱼海棠》的创作概述、电影内容概述、电影幕后花絮等，只需要对各个板块进行相应的排版布局即可。
+                    对于角色介绍页面和电影精彩图集展示页面的设计，主要用到了浮动进行布局。然后是网站的登录和账号注册页面的设计，这两个页面主要使用了各种表单标签，如密码框、文本框和单选按钮的使用。最后将写好的网页部署到Gitpage上。
+                </p>
+            </div>
+            <div class="title">
+                <h2>网页开发中遇到的主要问题及解决方法</h2>
+            </div>
+            <div class="text">
+                <p>
+                    &emsp;&emsp;问题一：导航栏应如何设计
+                </p>
+                <p>
+                    &emsp;&emsp;解决方法：①使用无序列表，通过“display : flex”将列表设置为Flex布局，列表项设置属性“flex-grow : 1”以实现导航栏的弹性布局。
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;②导航栏里的列表项里面放置超链接a标签，以实现各个页面之间的跳转，但因为a标签是内联元素，无法布满整个列表项，所以需要对a标签设置样式“{display:block;width: 100%;height: 100%;}”以实现点击整个列表项都能触发超链接。
+                </p>
+                <br>
+                <p>
+                    &emsp;&emsp;问题二：网页顶部的图集如何实现定时轮播效果并能够通过鼠标点击实现切换图片
+                </p>
+                <p>
+                    &emsp;&emsp;解决方法：通过JavaScript DOM 获取需要实现轮播动画的图片，根据图片数量创建相应的圆点并为每个圆点绑定自定义属性，通过事件委托给圆点切换区域绑定点击事件，根据圆点的自定义属性值进行相应的切换，最后通过定时器设置图片自动切换的效果。
+                </p>
+                <br>
+                <p>
+                    &emsp;&emsp;问题三：角色介绍中的角色画面与角色简介的布局、角色与角色之间的布局如何设计
+                </p>
+                <p>
+                    &emsp;&emsp;解决方法：①方法一：把所有角色都存放在一个列表中，角色图片与角色介绍分别存放到两个div里面，实现了角色图片与简介之间的纵向布局，然后将每个列表项设置样式“{float:left;}”实现向左浮动，并为每个列表项设置外边距，这样就实现了各个角色在网页中呈现网格分布。
+                    <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;②方法二：与方法一一样使用列表项存放每个角色，然后为列表设置样式“{display:grid;}”实现Grid布局，然后通过设置“grid-template-columns”属性和“grid-gap”属性设置列数和间隔。
+                </p>
+                <br>
+                <p>
+                    &emsp;&emsp;问题四：网页标签处的logo如何设计
+                </p>
+                <p>
+                    &emsp;&emsp;解决方法：通过link标签引入相应的logo图片即可，如: &lt;link rel="shortcut icon" href="images/logo3.jpg" type="image/x-icon" /&gt;。
+                </p>
+                <br>
+                <p>
+                    &emsp;&emsp;问题五：登录界面与注册界面用户输入的信息如何进行核对与保存
+                </p>
+                <p>
+                    &emsp;&emsp;解决方法：因为本网页未涉及后端数据的获取与保存，所以该问题未解决。
+                </p>
+            </div>
+            <div class="title">
+                <h2>总结</h2>
+            </div>
+            <div class="text">
+                <p>
+                    &emsp;&emsp;本次网页的开发，使用了HTML + CSS + JavaScript 完成。其中主要是对HTML和CSS的使用，JavaScript的使用相对较少，
+                    对于HTML中各种标签的使用，主要是对整个网页的整体的框架有个大概的构建。然后是CSS部分，是为HTML部分写的网页的内容设置样式，
+                    也包括对各个元素之间，也就是对整个网页进行布局。本网页对CSS的使用主要使用了Flex布局、浮动、Grid布局，并为各个元素设置相应的样式。最后是JavaScript的使用，本网站是一个静态网站，对于JavaScript的使用较少，主要用于实现图片的定时轮播和鼠标点击实现图片切换效果。
+                    通过此次网页的设计开发，让我对网页开发的过程和相关语言和工具的使用有了进一步的认识。对于网页整体框架的设计、网页样式的设置和网页的布局的运用更加的熟练。
+                    但本网站的开发也存在许多明显的不足，例如，网站的整体布局较简单，所呈现的信息也较少，对于网页的交互方面涉及更是少之又少等。因此还有较大的改进空间。
+                </p>
+            </div>
+            <br>
+            <br>
+        </div>
+        <!--底部-->
+        <footer>
+            <p>大鱼海棠</p>
+            <p>author:三柒</p>
+        </footer>
+    </div>
+</body>
+
+</html>
